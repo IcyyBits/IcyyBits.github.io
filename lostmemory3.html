@@ -1,0 +1,95 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>   <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: black;
+            color: white;
+            font-family: Monospace;
+        }
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+        input[type="text"] {
+            padding: 10px;
+            font-size: 1em;
+            margin-bottom: 20px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin: 10px 0;
+        }
+        a {
+            
+            text-decoration: none;
+            font-size: 1.2em;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #28a745;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    
+        audio {
+            display: none;
+        }
+        #playButton {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            display: inline-block;
+        }
+    </style>
+<body>
+    <script>
+        window.onload = function() {
+            setTimeout(function() {
+                playAudio();
+            }, 3000);
+        }
+
+        function playAudio() {
+            var audio = document.getElementById('myAudio');
+            audio.play().catch(function(error) {
+                console.log("Autoplay was prevented. Interaction is required.");
+            });
+        }
+    </script>
+<body>
+    <h1 style="color: lightgreen; font-size: 30;">Lost Memory</h1>
+    <h2 style="color: red;">3/3</h2>
+      <audio id="myAudio">
+        <source src="voice3.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <button id="playButton" onclick="playAudio()">Play Audio</button>
+    <p style="color: khaki">Day by day, I learned to navigate this new existence. I created new memories with my family, even if the old ones remained elusive. Emma and I started going to therapy together, and slowly, we rebuilt our life on the fragile foundation of my forgotten past.</p>
+<p style="color: pink">There are moments when I feel the weight of my loss—the loss of my parents, my memories, my sense of self. But I also feel the strength of the love that surrounds me, a love that survived even when I couldn't remember it. Emma, Lily, and Max remind me every day that while the past may be lost, the present and the future are ours to shape.</p>
+<p style="color: orange">In the quiet moments of the night, when the house is still and the world outside fades, I sometimes catch a glimpse of my parents in my dreams. They smile at me, as if to say it's okay, as if to reassure me that they are at peace. And perhaps, in those fleeting moments, I find a piece of the Jason I once was.</p>
+<p style="color: blue">Life is fragile, unpredictable, and often unfair. But it is also resilient and beautiful in its ability to heal and rebuild. I may have lost my memories, but I have found new purpose and love. And in that, I find the strength to keep moving forward.</p>
+<p style="color: red">Clue: @#-&£_#</p>
+<a href="gimic.html"><button type="submit">Click here</button></a>
+</body>

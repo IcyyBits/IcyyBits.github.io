@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vault8</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: black;
+            color: white;
+            font-family: Monospace;
+        }
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+        input[type="text"] {
+            padding: 10px;
+            font-size: 1em;
+            margin-bottom: 20px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin: 10px 0;
+        }
+        a {
+            
+            text-decoration: none;
+            font-size: 1.2em;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #28a745;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    }
+    </style>    
+</head>
+<body>
+    <h1 style="color: cyan;">Page 1</h1>
+   <p style="color: lightgreen;">Puzzle: You see a fork in the road with two paths. Left and Right.</p> 
+   <p>Instructions:</p>
+   <ol type="i">
+       <li>If you go Left, remember to pick Left on Page 4.</li>
+       <li>If you go Right, you have to pick Right on Page 7.</li>
+   </ol>
+   <nav>
+       <a href="page2.html"><button type="submit">Left</button></a>
+       <a href="page3.html"><button type="submit">Right</button></a>
+   </nav>
+</body>

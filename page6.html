@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vault8</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: black;
+            color: white;
+            font-family: Monospace;
+        }
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+        input[type="text"] {
+            padding: 10px;
+            font-size: 1em;
+            margin-bottom: 20px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin: 10px 0;
+        }
+        a {
+            
+            text-decoration: none;
+            font-size: 1.2em;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #28a745;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    }
+    </style>    
+</head>
+<body>
+    <h1 style="color: cyan;">Page 6</h1>
+    <p style="color: lightgreen">Puzzle: You encounter a sphinx that asks, "What has keys but can't open locks?"</p>
+    <p>Instructions:</p>
+    <ol type='i'>
+        <li>If you answer "Piano," you must pick Right on Page 7.</li>
+        <li>If you answer "Map," remember to pick Left on Page 7.</li>
+    </ol>
+    <nav>
+        <a href="page7.html"><button type="submit">Piano</button></a>
+        <a href="deadend.html"><button type="submit">Map</button></a>
+    </nav>
+</body>

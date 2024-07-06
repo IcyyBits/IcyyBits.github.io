@@ -1,0 +1,100 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>   <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: black;
+            color: white;
+            font-family: Monospace;
+        }
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+        input[type="text"] {
+            padding: 10px;
+            font-size: 1em;
+            margin-bottom: 20px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin: 10px 0;
+        }
+        a {
+            
+            text-decoration: none;
+            font-size: 1.2em;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #28a745;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    
+        audio {
+            display: none;
+        }
+        #playButton {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            display: inline-block;
+        }
+    </style>
+<body>
+    <script>
+        window.onload = function() {
+            setTimeout(function() {
+                playAudio();
+            }, 3000);
+        }
+
+        function playAudio() {
+            var audio = document.getElementById('myAudio');
+            audio.play().catch(function(error) {
+                console.log("Autoplay was prevented. Interaction is required.");
+            }); 
+        }
+    </script>
+    
+    <h1 style="color: lightgreen; font-size: 30;">Lost Memory</h1>
+    <h2 style="color: red;">1/3</h2><br />
+        <audio id="myAudio">
+        <source src="voice1.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <button id="playButton" onclick="playAudio()">Play Audio</button>
+    <p style="color: cyan;"> 
+My name is Jason. At least, that's what they tell me. I have a wife, Emma, and two beautiful children, Lily and Max. They are my world now, even though I don't remember how we became a family. My story is a patchwork of memories, some mine, some told to me by others. </p>
+<br />
+<p style="color: orange;">
+Years ago, I was in a car accident that left me in a coma. While I lay unconscious, my parents passed away. The doctors said it was natural causes, but the timing felt like a cruel twist of fate. I was their only child, and they died without me ever knowing, without a chance to say goodbye. </p>
+<br />
+<p style="color: pink;">
+When I woke from the coma, the world I returned to was unrecognizable. My parents were gone, and the grief I felt was overwhelming. It was as if a part of me had died with them. The depression was deep, a dark abyss that I couldn't escape. One night, in a moment of utter despair, I tried to end my life. But Emma found me just in time.
+</p>
+<a href="lostmemory2.html"><button type="submit">Next</button></a>
+</body>
+</html>

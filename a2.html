@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Memoryfinder3000 Introduction</title>
+<style>
+  body {
+    font-family: Monospace;
+    text-align: center;
+    padding-top: 100px;
+    justify-content: center;
+    background-color: black;
+  }
+  .fade {
+    display: none;
+    margin: 20px;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+  }
+  button {
+    display: none;
+    margin-top: 20px;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+        background-color: #28a745;
+            border-radius: 4px;
+    cursor: pointer;
+        padding: 10px 20px;
+    border: none;
+</style>
+</head>
+<body>
+  <h1 style="color: lightgreen;" class="fade" id="title">Hey!</h1>
+  <p style="color: cyan;" class="fade" id="intro">I'm Memoryfinder3000</p>
+  <p style="color: cyan;" class="fade" id="purpose">What's my purpose?</p>
+  <p style="color: cyan;" class="fade" id="excited">I'M GLAD YOU ASKED!</p>
+  <p style="color: cyan;" class="fade" id="task">I find memories!!!</p>
+  <p style="color: cyan;" class="fade" id="action">Let's find your memory</p> <br />
+  <a href="Intro.html"><button class="fade" id="button" type="submit">Next</button></a>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function(){
+      const elements = [
+        document.getElementById("title"),
+        document.getElementById("intro"),
+        document.getElementById("purpose"),
+        document.getElementById("excited"),
+        document.getElementById("task"),
+        document.getElementById("action"),
+        document.getElementById("button")
+      ];
+
+      elements.forEach((element, index) => {
+        setTimeout(function() {
+          fadeInElement(element);
+        }, index * 2000);
+      });
+
+      function fadeInElement(element) {
+        element.style.display = "block";
+        setTimeout(function() {
+          element.style.opacity = "1";
+        }, 100);
+      }
+    });
+  </script>
+</body>
+</html>

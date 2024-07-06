@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dialogue Fade-In Animation with Next Button</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding-top: 100px;
+    background-color: black;
+  }
+  .dialogue {
+    display: none;
+    margin: 20px;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+  }
+  .button {
+    display: none;
+    margin-top: 20px;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+        padding: 10px 20px;
+    border: none;
+    background-color: #28a745;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+</style>
+</head>
+<body>
+  <div>
+    <p id="doctor" class="dialogue">Doctor: Ma'am, he will be just fine. Our technology is very advanced.</p>
+    <p id="female-voice" class="dialogue">Female Voice: Are you absolutely sure?</p>
+    <p id="consciousness" class="dialogue">Consciousness: What is happening? Who are they? I can feel that my head hurts. Where am I?</p>
+    <p id="doctor2" class="dialogue">Doctor: Yes! I have told you many times. He is in good hands.</p>
+    <p id="consciousness2" class="dialogue">Consciousness: What happened to me?</p>
+    <p id="doctor3" class="dialogue">Doctor: Give him Anastasia.</p> <br />
+    <a href="a2.html"><button id="next-button" class="button">Next</button></a>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function(){
+      const doctor = document.getElementById("doctor");
+      const femaleVoice = document.getElementById("female-voice");
+      const consciousness = document.getElementById("consciousness");
+      const doctor2 = document.getElementById("doctor2");
+      const consciousness2 = document.getElementById("consciousness2");
+      const doctor3 = document.getElementById("doctor3");
+      const nextButton = document.getElementById("next-button");
+
+      setTimeout(function() {
+        fadeInElement(doctor);
+      }, 1000);
+
+      setTimeout(function() {
+        fadeInElement(femaleVoice);
+      }, 4000);
+
+      setTimeout(function() {
+        fadeInElement(consciousness);
+      }, 7000);
+
+      setTimeout(function() {
+        fadeInElement(doctor2);
+      }, 10000);
+
+      setTimeout(function() {
+        fadeInElement(consciousness2);
+      }, 13000);
+
+      setTimeout(function() {
+        fadeInElement(doctor3);
+      }, 16000);
+
+      setTimeout(function() {
+        fadeInElement(nextButton);
+      }, 19000);
+
+      function fadeInElement(element) {
+        element.style.display = "inline-block";
+        setTimeout(function() {
+          element.style.opacity = "1";
+        }, 100);
+      }
+    });
+  </script>
+</body>
+</html>

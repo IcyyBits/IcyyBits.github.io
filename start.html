@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: black;
+            color: white;
+            font-family: Monospace;
+        }
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+        input[type="text"] {
+            padding: 10px;
+            font-size: 1em;
+            margin-bottom: 20px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin: 10px 0;
+        }
+        a {
+            
+            text-decoration: none;
+            font-size: 1.2em;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #28a745;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer
+    </style>
+<body>
+    <h2 style="color: lightgreen">You see 4 paths in front of you.</h2> <br />
+    <p style="color: red"><b>Choose wisely</b></p><br />
+    <nav>
+        
+     1. <a href="maze.html" style="margin-right: 100"><button type="submit">Maze</button></a>
+     2. <a href="lock1.html"><button type="submit">Silence</button></a>
+    </nav>
+    <br />
+    <nav>
+      3. <a href="lock3.html" style="margin-right: 100"><button type="submit">Puzzle</button></a>
+      4. <a href="lock2.html"><button type="submit">Memory</button></a>
+    </nav> <br />
+    <p style="color: purple">Special Code</p>
+        <input type="text" id="codeInput" placeholder="example: 1234/Abcd">
+    <ul id="links" style="display: none;">
+        <li><a href="#####"> <button onclick="checkCode()">ENTER</button></a></li>
+    </ul>
+
+    <script>
+        const correctCode = "Nitya";
+        const codeInput = document.getElementById("codeInput");
+        const links = document.getElementById("links");
+
+        codeInput.addEventListener("keyup", function() {
+            if (codeInput.value === correctCode) {
+                links.style.display = "block";
+            } else {
+                links.style.display = "none";
+            }
+        });
+    </script>
+</body>

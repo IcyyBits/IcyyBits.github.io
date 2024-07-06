@@ -1,0 +1,94 @@
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>  <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: black;
+            color: white;
+            font-family: Monospace;
+        }
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+        input[type="text"] {
+            padding: 10px;
+            font-size: 1em;
+            margin-bottom: 20px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin: 10px 0;
+        }
+        a {
+            
+            text-decoration: none;
+            font-size: 1.2em;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #28a745;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    
+        audio {
+            display: none;
+        }
+        #playButton {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            display: inline-block;
+        }
+    </style>
+<body>
+    <script>
+        window.onload = function() {
+            setTimeout(function() {
+                playAudio();
+            }, 3000);
+        }
+
+        function playAudio() {
+            var audio = document.getElementById('myAudio');
+            audio.play().catch(function(error) {
+                console.log("Autoplay was prevented. Interaction is required.");
+            });
+        }
+    </script>
+    <h1 style="color: lightgreen; font-size: 30;">Losy Memory</h1>
+    <h2 style="color: red">2/3</h2>
+        <audio id="myAudio">
+        <source src="voice2.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <button id="playButton" onclick="playAudio()">Play Audio</button>
+<p style="color: purple;">She saved me, but the attempt left a scar deeper than any physical wound. When I awoke in the hospital, I realized I had lost my memory. Faces, names, events—they were all blank spaces in my mind. The doctors called it dissociative amnesia, a condition brought on by the trauma and emotional turmoil. </p>
+<p style="color: cyan;">
+Emma became my anchor in this sea of confusion. She told me about our life together, about our love story that began in college, the birth of our children, the small joys, and the challenges we faced. She showed me photos and videos, hoping to trigger some recollection. Sometimes, a faint spark of familiarity would flicker, but it was never enough. </p>
+<p style="color: orange;">
+Lily and Max were resilient. They didn't understand why their daddy was different, why he sometimes looked at them with a stranger's eyes. But they loved me unconditionally. Their laughter became my solace, their hugs my lifeline. </p>
+ <a href="lostmemory3.html"><button type="submit">Next</button></a>
+ </body>
