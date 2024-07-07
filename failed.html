@@ -47,9 +47,34 @@
     color: white;
     border-radius: 4px;
     cursor: pointer;
+        }
+    .foot{
+        bottom: 0px;
+        left: 0px;
+        position: absolute;
+    }
     </style>
 <body>
     <h1 style="color: red">DEATH</h1>
     <p style="color: khaki">You tried to leave that area. But someone was waiting for you. It's the same sketchy person. This person is holding a knife. You will get stabbed</p>
     <a href="silence.html"><button type="submit">Try again</button></a>
+        <div class="foot">
+        <nav>
+            <a href="index.html"><button id="copyButton" type="submit">Home</button></a>
+            <a href="start.html"><button id="copyButton" type="submit">Paths</button></a>
+            <button id="alertButton">Hint</button>
+        </nav>
+    </div>
+    <script>
+    document.getElementById('copyButton').addEventListener('click', function() {
+    const url = window.location.href;
+    navigator.clipboard.writeText(url).catch(function(err) {
+    console.error('Failed to copy: ', err);
+    });
+});
+        document.getElementById('alertButton').addEventListener('click', function() {
+            alert('No hints');
+        });
+</script>
 </body>
+</html>
