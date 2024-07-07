@@ -24,8 +24,33 @@
             padding: 10px 20px;
             font-size: 16px;
         }
+        .foot{
+    bottom: 0px;
+    left: 0px;
+    position: absolute;
+}
     </style>
 <body>
     <p style="font-size: 40px">CONGRATULATIONS <br />
-    YOU ARE A GENIUS</p>
+    YOU ARE A GENIUS <br />
+    Also a dumba$$</p>
+<div class="foot">
+    <nav>
+        <a href="index.html"><button id="copyButton" type="submit">Home</button></a>
+        <a href="start.html"><button id="copyButton" type="submit">Paths</button></a>
+        <button id="alertButton">Hint</button>
+    </nav>
+</div>
+<script>
+    document.getElementById('copyButton').addEventListener('click', function() {
+    const url = window.location.href;
+    navigator.clipboard.writeText(url).catch(function(err) {
+    console.error('Failed to copy: ', err);
+    });
+});
+    document.getElementById('alertButton').addEventListener('click', function() {
+    alert('No hints');
+});
+</script>
 </body>
+</html>
