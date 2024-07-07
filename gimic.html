@@ -41,6 +41,11 @@
     padding: 10px 20px;
     border: none;
   }
+      .foot{
+        bottom: 0px;
+        left: 0px;
+        position: absolute;
+    }
 </style>
 </head>
 <body>
@@ -48,7 +53,13 @@
     <h1 style="color: lightgreen" class="typewriter" id="typewriter-text"></h1>
    <a href="wake.html"><button style="color: white" class="button" id="fade-button">Wake Up</button> </a>
   </div>
-
+    <div class="foot">
+        <nav>
+            <a href="index.html"><button id="copyButton" type="submit">Home</button></a>
+            <a href="start.html"><button id="copyButton" type="submit">Paths</button></a>
+            <button id="alertButton">Hint</button>
+        </nav>
+    </div>
   <script>
     document.addEventListener('DOMContentLoaded', function(){
       const text= "It's Time";
@@ -67,4 +78,15 @@
       }
       typeWriter();
     });
+        document.getElementById('copyButton').addEventListener('click', function() {
+    const url = window.location.href;
+    navigator.clipboard.writeText(url).catch(function(err) {
+    console.error('Failed to copy: ', err);
+    });
+});
+        document.getElementById('alertButton').addEventListener('click', function() {
+            alert('No hints');
+        });
 </script>
+</body>
+</html>
