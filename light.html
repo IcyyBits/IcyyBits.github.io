@@ -47,10 +47,35 @@
     color: white;
     border-radius: 4px;
     cursor: pointer;
+        }
+            .foot{
+        bottom: 0px;
+        left: 0px;
+        position: absolute;
+    }
     </style>
 <body>
     <h1 style="color: lightgreen">CONGRATULATIONS!</h1>
     <p style="color: khaki">You've found a clue and an exit</p>
     <p>Clue: Max</p>
     <a href="start.html"><button type="submit">Go back</button></a>
+<div class="foot">
+    <nav>
+        <a href="index.html"><button id="copyButton" type="submit">Home</button></a>
+        <a href="start.html"><button id="copyButton" type="submit">Paths</button></a>
+        <button id="alertButton">Hint</button>
+    </nav>
+</div>
+<script>
+    document.getElementById('copyButton').addEventListener('click', function() {
+    const url = window.location.href;
+    navigator.clipboard.writeText(url).catch(function(err) {
+    console.error('Failed to copy: ', err);
+    });
+});
+        document.getElementById('alertButton').addEventListener('click', function() {
+            alert('No hints');
+        });
+</script>
 </body>
+</html>
