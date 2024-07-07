@@ -49,13 +49,18 @@
     border-radius: 4px;
     cursor: pointer;
     }
+        .foot{
+        bottom: 0px;
+        left: 0px;
+        position: absolute;
+    }
 </style>
 <body>
     <h1>Path is locked</h1>
     <p>Enter the code</p>
         <input type="text" id="codeInput" placeholder="Code From Silence">
     <ul id="links" style="display: none;">
-        <li><a href="Puzzle.html"> <button onclick="checkCode()">Enter</button></a></li>
+        <li><a href="puzzle.html"> <button onclick="checkCode()">Enter</button></a></li>
     </ul>
 <script>
         const correctCode = "Max";
@@ -70,4 +75,23 @@
             }
         });
 </script>
+<div class="foot">
+    <nav>
+        <a href="index.html"><button id="copyButton" type="submit">Home</button></a>
+        <a href="start.html"><button id="copyButton" type="submit">Paths</button></a>
+        <button id="alertButton">Hint</button>
+    </nav>
+</div>
+<script>
+    document.getElementById('copyButton').addEventListener('click', function() {
+    const url = window.location.href;
+    navigator.clipboard.writeText(url).catch(function(err) {
+    console.error('Failed to copy: ', err);
+    });
+});
+        document.getElementById('alertButton').addEventListener('click', function() {
+            alert('No hints');
+        });
+</script>
 </body>
+</html>
