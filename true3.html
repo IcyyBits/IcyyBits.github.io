@@ -30,6 +30,12 @@
     color: white;
     border-radius: 4px;
     cursor: pointer;
+}
+.foot{
+    bottom: 0px;
+    left: 0px;
+    position: absolute;
+}
 </style>
 <body>
     <h1>STEP 4</h1>
@@ -38,4 +44,23 @@
     <a href="false1.html" style="margin-right: 100"><button type="submit">Left</button></a>
     <a href="true4.html"><button type="submit">Right</button></a>
     </nav>
+<div class="foot">
+    <nav>
+        <a href="index.html"><button id="copyButton" type="submit">Home</button></a>
+        <a href="start.html"><button id="copyButton" type="submit">Paths</button></a>
+        <button id="alertButton">Hint</button>
+    </nav>
+</div>
+<script>
+    document.getElementById('copyButton').addEventListener('click', function() {
+    const url = window.location.href;
+    navigator.clipboard.writeText(url).catch(function(err) {
+    console.error('Failed to copy: ', err);
+    });
+});
+    document.getElementById('alertButton').addEventListener('click', function() {
+    alert('No hints');
+});
+</script>
 </body>
+</html>
