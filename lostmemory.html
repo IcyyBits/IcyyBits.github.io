@@ -47,7 +47,12 @@
     color: white;
     border-radius: 4px;
     cursor: pointer;
-    
+        }
+            .foot{
+        bottom: 0px;
+        left: 0px;
+        position: absolute;
+    }
         audio {
             display: none;
         }
@@ -96,5 +101,23 @@ Years ago, I was in a car accident that left me in a coma. While I lay unconscio
 When I woke from the coma, the world I returned to was unrecognizable. My parents were gone, and the grief I felt was overwhelming. It was as if a part of me had died with them. The depression was deep, a dark abyss that I couldn't escape. One night, in a moment of utter despair, I tried to end my life. But Emma found me just in time.
 </p>
 <a href="lostmemory2.html"><button type="submit">Next</button></a>
+<div class="foot">
+    <nav>
+        <a href="index.html"><button id="copyButton" type="submit">Home</button></a>
+        <a href="start.html"><button id="copyButton" type="submit">Paths</button></a>
+        <button id="alertButton">Hint</button>
+    </nav>
+</div>
+<script>
+    document.getElementById('copyButton').addEventListener('click', function() {
+    const url = window.location.href;
+    navigator.clipboard.writeText(url).catch(function(err) {
+    console.error('Failed to copy: ', err);
+    });
+});
+        document.getElementById('alertButton').addEventListener('click', function() {
+            alert('No hints');
+        });
+</script>
 </body>
 </html>
