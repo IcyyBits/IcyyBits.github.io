@@ -47,6 +47,12 @@
     color: white;
     border-radius: 4px;
     cursor: pointer;
+        }
+    .foot{
+        bottom: 0px;
+        left: 0px;
+        position: absolute;
+    }
     </style>
 </head>
 <body>
@@ -83,5 +89,23 @@ Your quest for digits now must end. </p>
 </div>
         <a href="Intro.html" style="color: lightgreen;">Go Back</a>
     
-
+    <div class="foot">
+        <nav>
+            <a href="index.html"><button id="copyButton" type="submit">Home</button></a>
+            <a href="start.html"><button id="copyButton" type="submit">Paths</button></a>
+            <button id="alertButton">Hint</button>
+        </nav>
+    </div>
+    <script>
+    document.getElementById('copyButton').addEventListener('click', function() {
+    const url = window.location.href;
+    navigator.clipboard.writeText(url).catch(function(err) {
+    console.error('Failed to copy: ', err);
+    });
+});
+        document.getElementById('alertButton').addEventListener('click', function() {
+            alert('If you cannot answer the question, you can just click on "Show answer" ');
+        });
+</script>
 </body>
+</html>
