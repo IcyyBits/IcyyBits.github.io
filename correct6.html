@@ -47,6 +47,12 @@
     color: white;
     border-radius: 4px;
     cursor: pointer;
+        }
+    .foot{
+        bottom: 0px;
+        left: 0px;
+        position: absolute;
+    }
     </style>
     <script>
         function verifyCode() {
@@ -66,4 +72,23 @@
     <p style="font-size: 10; color: lightgreen;">Make sure the first letter is in capital</p>
     <input type="text" id="codeInput" placeholder="Enter the code here">
     <button onclick="verifyCode()">Submit</button>
+        <div class="foot">
+        <nav>
+            <a href="Intro.html"><button id="copyButton" type="submit">Clue</button></a>
+            <a href="start.html"><button id="copyButton" type="submit">Paths</button></a>
+            <button id="alertButton">Hint</button>
+        </nav>
+    </div>
+    <script>
+    document.getElementById('copyButton').addEventListener('click', function() {
+    const url = window.location.href;
+    navigator.clipboard.writeText(url).catch(function(err) {
+    console.error('Failed to copy: ', err);
+    });
+});
+        document.getElementById('alertButton').addEventListener('click', function() {
+            alert('Look! the home button changed info a clue button. Click it and check out the puzzle again');
+        });
+</script>
 </body>
+</html>
