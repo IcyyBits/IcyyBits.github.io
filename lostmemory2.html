@@ -47,7 +47,12 @@
     color: white;
     border-radius: 4px;
     cursor: pointer;
-    
+        }
+        .foot{
+        bottom: 0px;
+        left: 0px;
+        position: absolute;
+    }
         audio {
             display: none;
         }
@@ -91,4 +96,23 @@ Emma became my anchor in this sea of confusion. She told me about our life toget
 <p style="color: orange;">
 Lily and Max were resilient. They didn't understand why their daddy was different, why he sometimes looked at them with a stranger's eyes. But they loved me unconditionally. Their laughter became my solace, their hugs my lifeline. </p>
  <a href="lostmemory3.html"><button type="submit">Next</button></a>
- </body>
+<div class="foot">
+    <nav>
+        <a href="index.html"><button id="copyButton" type="submit">Home</button></a>
+        <a href="start.html"><button id="copyButton" type="submit">Paths</button></a>
+        <button id="alertButton">Hint</button>
+    </nav>
+</div>
+<script>
+    document.getElementById('copyButton').addEventListener('click', function() {
+    const url = window.location.href;
+    navigator.clipboard.writeText(url).catch(function(err) {
+    console.error('Failed to copy: ', err);
+    });
+});
+        document.getElementById('alertButton').addEventListener('click', function() {
+            alert('No hints');
+        });
+</script>
+</body>
+</html>
