@@ -14,22 +14,34 @@
     <button class="top-left-button" onclick="toggleOverlay()">
         <img src="open-overlay-icon.png" alt="Open Overlay">
     </button>
-
         <!-- Your content goes here -->
-    <h1 style="color: lightgreen">MEMORY</h1>
-    <p style="color: khaki; font-size: 15">Are you ready? <br /> You bettet be!</p>
-    <p style="color: cyan">Start your journey?</p>
-    <nav>
-        <a href="memory1.html" style="margin-right: 100"><button type="submit">Yes</button></a>
-        <a href="start.html"><button type="submit">No</button></a>
-    </nav>
-    
+    <script>
+        function verifyCode() {
+            const correctCode = "Silence";
+            const inputCode = document.getElementById("codeInput").value;
+
+            if (inputCode === correctCode) {
+                window.location.href = "correct1.html";
+            } else {
+                window.location.href = "wrong.html";
+            }
+        }
+function hintMemory() {
+    alert("Go back to the page with 4 different paths")
+}
+    </script>
+<body>
+    <h1 style="color: cyan;">ROUND 1</h1>
+    <p style="color: khaki; font-size: 18">What is the name of the 2nd path?</p>
+    <p style="font-size: 10; color: lightgreen;">Make sure the first letter is in capital</p>
+    <input type="text" id="codeInput" placeholder="Enter the code here">
+    <button onclick="verifyCode()">Submit</button>
     <!-- ends here -->
 </div>
     <div class="navbar bottom">
         <img src="home-icon.png" alt="Home" onclick="location.href='index.html'">
         <img src="save-icon.png" alt="Save" onclick="copyLinkToClipboard()">
-        <img src="hint-icon.png" alt="hint" onclick="hintAlert()"/>
+        <img src="hint-icon.png" alt="hint" onclick="hintMemory()"/>
     </div>
 </script>
     <div id="overlay" class="overlay">
