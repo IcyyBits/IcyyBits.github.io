@@ -3,59 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Mist</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            background-color: black;
-            color: white;
-            font-family: Monospace;
-        }
-        h1 {
-            font-size: 3em;
-            margin-bottom: 20px;
-        }
-        input[type="text"] {
-            padding: 10px;
-            font-size: 1em;
-            margin-bottom: 20px;
-        }
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        li {
-            margin: 10px 0;
-        }
-        a {
-            
-            text-decoration: none;
-            font-size: 1.2em;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        button {
-    padding: 10px 20px;
-    border: none;
-    background-color: #28a745;
-    color: white;
-    border-radius: 4px;
-    cursor: pointer
-        }
-.foot{
-    position: absolute;
-    bottom: 0px;
-    left: 0px;
-}
-    </style>
 <body>
+    <div class="navbar top">
+        <span>Memory Mist</span>
+    </div>
+
+    <button class="top-left-button" onclick="toggleOverlay()">
+        <img src="open-overlay-icon.png" alt="Open Overlay">
+    </button>
+
+        <!-- Your content goes here -->
     <h2 style="color: lightgreen">You see 4 paths in front of you.</h2> <br />
     <p style="color: red"><b>Choose wisely</b></p><br />
     <nav>
@@ -68,41 +28,26 @@
       3. <a href="lock3.html" style="margin-right: 100"><button type="submit">Puzzle</button></a>
       4. <a href="lock2.html"><button type="submit">Memory</button></a>
     </nav> <br />
-    <p style="color: purple">Special Code</p>
-        <input type="text" id="codeInput" placeholder="example: 1234/Abcd">
-    <ul id="links" style="display: none;">
-        <li><a href="#####"> <button onclick="checkCode()">ENTER</button></a></li>
-    </ul>
-
-    <script>
-        const correctCode = "Nitya";
-        const codeInput = document.getElementById("codeInput");
-        const links = document.getElementById("links");
-
-        codeInput.addEventListener("keyup", function() {
-            if (codeInput.value === correctCode) {
-                links.style.display = "block";
-            } else {
-                links.style.display = "none";
-            }
-        });
-    </script>
-<div class="foot">
-    <nav>
-        <a href="index.html"><button id="copyButton" type="submit">Home</button></a>
-        <button id="alertButton">Hint</button>
-    </nav>
+    <!-- ends here -->
 </div>
-<script>
-    document.getElementById('copyButton').addEventListener('click', function() {
-    const url = window.location.href;
-    navigator.clipboard.writeText(url).catch(function(err) {
-    console.error('Failed to copy: ', err);
-    });
-});
-    document.getElementById('alertButton').addEventListener('click', function() {
-    alert('No hints');
-});
-</script>
+    <div class="navbar bottom">
+        <img src="home-icon.png" alt="Home" onclick="location.href='index.html'">
+        <img src="save-icon.png" alt="Save" onclick="copyLinkToClipboard()">
+
+        <img src="hint-icon.png" alt="hint" onclick="hintAlert()"/>
+    </div>
+
+    <div id="overlay" class="overlay">
+        <button class="close-button" onclick="toggleOverlay()">
+            <img src="close-icon.png" alt="Close">
+        </button>
+        <ul>
+            <li><a href="Intro.html">Human Verification puzzle</a></li>
+            <li><a href="start.html">4 different paths</a></li>
+            <li><a href="about.html">About us</a></li>
+        </ul>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
