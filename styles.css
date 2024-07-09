@@ -1,0 +1,196 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1D313E;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: white;
+}
+
+.content {
+    flex: 1;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar {
+    background-color: black;
+    color: white;
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+    z-index: 2;
+}
+
+.navbar.top {
+    top: 0;
+}
+
+.navbar.bottom {
+    bottom: 0;
+}
+
+.navbar img {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.top-left-button {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 3;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.top-left-button img {
+    width: 30px;
+    height: 30px;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: black;
+    transition: left 0.5s;
+    z-index: 4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.5);
+}
+
+.overlay.active {
+    left: 0;
+}
+
+.overlay .close-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.overlay .close-button img {
+    width: 30px;
+    height: 30px;
+}
+
+.overlay ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.overlay ul li {
+    margin-bottom: 10px;
+}
+
+.overlay a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+}
+
+.overlay a:hover {
+    text-decoration: underline;
+}
+
+.centre {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #28a745;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+input[type="text"] {
+    padding: 10px;
+    font-size: 1em;
+    margin-bottom: 20px;
+}
+.typewriter {
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: .15em solid orange;
+    animation: typing 3s steps(30, end), blink-caret .5s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orange }
+}
+
+.button {
+    display: none;
+    margin-top: 20px;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    background-color: #28a745;
+    border-radius: 4px;
+    cursor: pointer;
+    padding: 10px 20px;
+    border: none;
+}
+
+.dialogue {
+    display: none;
+    margin: 20px;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+audio {
+    display: none;
+}
+
+#playButton {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.fade {
+    display: none;
+    margin: 20px;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+#delayedButton {
+    display: none;
+}
