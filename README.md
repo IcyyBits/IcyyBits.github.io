@@ -15,7 +15,7 @@ Back Story 📖
 
 1. Email: mahirahaman74@gmail.com
 2. Another email: t32555615@gmail.com
-3. Discord: IcyBits
+3. Discord: IcyBits (Best option)
 
 ![1000643570](https://github.com/IcyyBits/IcyyBits.github.io/assets/170248936/7b36fecb-4fe5-457a-a7f7-9d61cdef8c02)
 
