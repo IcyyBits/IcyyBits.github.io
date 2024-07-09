@@ -14,7 +14,8 @@ Back Story 📖
 📞If you wish to contact me for some reason. Here's hoe you can do that.
 
 1. Email: mahirahaman74@gmail.com
-2. Discord: IcyBits
+2. Another email: t32555615@gmail.com
+3. Discord: IcyBits
 
 ![1000643570](https://github.com/IcyyBits/IcyyBits.github.io/assets/170248936/7b36fecb-4fe5-457a-a7f7-9d61cdef8c02)
 
