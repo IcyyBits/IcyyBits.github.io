@@ -1,92 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Typewriter Effect with Button Fade-In</title>
-<style>
-  body {
-    font-family: Monospace;
-    padding-top: 100px;
-    justify-content: center;
-    align-items: center;
-    background-color: black;
-    text-align: center;
-  }
-  .typewriter {
-    overflow: hidden;
-    white-space: nowrap;
-    border-right: .15em solid orange;
-    animation: typing 3s steps(30, end), blink-caret .5s step-end infinite;
-  }
-
-  @keyframes typing {
-    from { width: 0 }
-    to { width: 100% }
-  }
-
-  @keyframes blink-caret {
-    from, to { border-color: transparent }
-    50% { border-color: orange }
-  }
-
-  .button {
-    display: none;
-    margin-top: 20px;
-    opacity: 0; 
-    transition: opacity 1s ease-in-out;
-    background-color: #28a745;
-    border-radius: 4px;
-    cursor: pointer;
-    padding: 10px 20px;
-    border: none;
-  }
-      .foot{
-        bottom: 0px;
-        left: 0px;
-        position: absolute;
-    }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Mist</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <div class="navbar top">
+        <span>Memory Mist</span>
+    </div>
+
+    <button class="top-left-button" onclick="toggleOverlay()">
+        <img src="open-overlay-icon.png" alt="Open Overlay">
+    </button>
+        <!-- Your content goes here -->
   <div>
     <h1 style="color: lightgreen" class="typewriter" id="typewriter-text"></h1>
    <a href="wake.html"><button style="color: white" class="button" id="fade-button">Wake Up</button> </a>
   </div>
-    <div class="foot">
-        <nav>
-            <a href="index.html"><button id="copyButton" type="submit">Home</button></a>
-            <a href="start.html"><button id="copyButton" type="submit">Paths</button></a>
-            <button id="alertButton">Hint</button>
-        </nav>
+    <!-- ends here -->
+</div>
+    <div class="navbar bottom">
+        <img src="home-icon.png" alt="Home" onclick="location.href='index.html'">
+        <img src="save-icon.png" alt="Save" onclick="copyLinkToClipboard()">
+        <img src="hint-icon.png" alt="hint" onclick="hintAlert()"/>
     </div>
-  <script>
-    document.addEventListener('DOMContentLoaded', function(){
-      const text= "It's Time";
-      let i = 0;
-      function typeWriter() {
-        if (i < text.length) {
-          document.getElementById("typewriter-text").textContent += text.charAt(i);
-          i++;
-          setTimeout(typeWriter, 100);
-        } else {
-          document.getElementById("fade-button").style.display = "inline-block";
-          setTimeout(function() {
-            document.getElementById("fade-button").style.opacity = "1";
-          }, 100);
-        }
-      }
-      typeWriter();
-    });
-        document.getElementById('copyButton').addEventListener('click', function() {
-    const url = window.location.href;
-    navigator.clipboard.writeText(url).catch(function(err) {
-    console.error('Failed to copy: ', err);
-    });
-});
-        document.getElementById('alertButton').addEventListener('click', function() {
-            alert('No hints');
-        });
 </script>
+    <div id="overlay" class="overlay">
+        <button class="close-button" onclick="toggleOverlay()">
+            <img src="close-icon.png" alt="Close">
+        </button>
+        <ul>
+            <li><a href="Intro.html">Human Verification puzzle</a></li>
+            <li><a href="start.html">4 different paths</a></li>
+            <li><a href="about.html">About us</a></li>
+        </ul>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
