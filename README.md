@@ -11,7 +11,7 @@ Back Story 📖
 🧑🏻‍💻Hoping to learn more about programming
 (Might make it my major actually when I get in a college)
 🏫Not gonna drop out of college. I don't listen to "Android Tate"
-📞If you wish to contact me for some reason. Here's hoe you can do that.
+📞If you wish to contact me for some reason. Here's how you can do that.
 
 1. Email: mahirahaman74@gmail.com
 2. Another email: t32555615@gmail.com
